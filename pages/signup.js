@@ -18,7 +18,7 @@ const UserForm = () => {
         const formData = new FormData();
         formData.append('profile',userProfile);
         formData.append('details',JSON.stringify(userDetails));
-        const response = await fetch('https://ecommerce-site-azure.vercel.app/api/user/create',{
+        const response = await fetch('/api/user/create',{
             method: 'POST',
             body: formData
         })
